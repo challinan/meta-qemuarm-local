@@ -4,3 +4,5 @@ run_remove_busybox_httpd () {
 		   echo "${IPADDR} qemuarm" >> ${IMAGE_ROOTFS}/etc/hosts
 }
 ROOTFS_POSTPROCESS_COMMAND += " run_remove_busybox_httpd ; "
+
+IMAGE_INSTALL_append = " websdemo"
