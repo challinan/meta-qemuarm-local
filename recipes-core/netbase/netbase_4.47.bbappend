@@ -2,8 +2,6 @@
 
 PRINC := "${@int(PRINC) + 1}"
 
-SRC_URI += "file://interfaces"
-
 FILESEXTRAPATHS_prepend := "${THISDIR}/${BP}:"
 
-LICENSE = "CLOSED"
+LICENSE = "GPLv2"
