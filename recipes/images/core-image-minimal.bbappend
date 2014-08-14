@@ -3,3 +3,5 @@ remove_busybox_httpd () {
 }
 
 ROOTFS_POSTPROCESS_COMMAND += " remove_busybox_httpd ; "
+
+IMAGE_INSTALL_append = " websdemo"
