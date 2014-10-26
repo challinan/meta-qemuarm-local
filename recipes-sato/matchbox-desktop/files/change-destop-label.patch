@@ -1,0 +1,26 @@
+diff --git a/src/desktop.c b/src/desktop.c
+index d4fc2fb..f7b6a24 100644
+--- a/src/desktop.c
++++ b/src/desktop.c
+@@ -146,7 +146,7 @@ create_desktop (void)
+   window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+   g_signal_connect (window, "delete-event", G_CALLBACK (gtk_main_quit), NULL);
+   gtk_widget_set_name (window, "TakuWindow");
+-  gtk_window_set_title (GTK_WINDOW (window), _("Desktop"));
++  gtk_window_set_title (GTK_WINDOW (window), _("Mentor Embedded"));
+ 
+ #ifndef STANDALONE
+   gtk_window_set_type_hint (GTK_WINDOW (window), GDK_WINDOW_TYPE_HINT_DESKTOP);
+diff --git a/src/main.c b/src/main.c
+index e6d7231..8b7cfc4 100644
+--- a/src/main.c
++++ b/src/main.c
+@@ -60,7 +60,7 @@ main (int argc, char **argv)
+   GtkWidget *desktop;
+   
+   gtk_init (&argc, &argv);
+-  g_set_application_name (_("Desktop"));
++  g_set_application_name (_("matchbox-desktop"));
+ 
+ #if WITH_DBUS
+   g_idle_add (emit_loaded_signal, NULL);
